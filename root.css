@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
+html, body {
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+  font-family: monospace;
+  background-color: #6e6e6e;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#discGrid {
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  margin: 0 auto;
+}
+
+#discography {
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-bottom: 5vw;
+}
+
+.discGridItem {
+  width: 80vmin;
+  height: 80vmin;
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 2.5vw;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.title-nav {
+  display: flex;
+  flex: 1 0 67%;
+  align-items: center
+}
+
+.title {
+  width: 34%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nav {
+  width: 33%;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.socials {
+  width: 33%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+.socials img {
+  width: 36px;
+  height 36px;
+  padding: 2px;
+  margin: 5px;
+}
+
+.bio {
+  text-align: center;
+  padding: 7% 15%;
+  font-size: 1.7rem;
+}
+
+.coverart {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 5;
+  position: relative;
+  box-shadow: 0 0 30px #404040;
+  border-radius: 3px;
+  opacity: 1;
+  transition: 0.3s all;
+}
+
+.discGridItem:hover .coverart {
+  opacity: 0;
+  z-index: 0;
+}
+
+.name {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 2.5em;
+  color: white;
+  font-weight: bold;
+}
+
+.currentPage {
+  border-bottom: 1px solid #000;
+}
+
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  line-height: 2;
+}
